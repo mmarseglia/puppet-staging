@@ -103,5 +103,6 @@ define staging::extract (
 
   exec { "extract ${name}":
     command => $command,
+    require => Package['unzip'],
   }
 }
